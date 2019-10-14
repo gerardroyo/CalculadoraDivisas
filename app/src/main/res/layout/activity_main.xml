@@ -236,12 +236,14 @@
         android:id="@+id/textViewEuro"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        android:background="#D4D5D5"
         android:text="Euro"
+        android:textColor="#040404"
         app:layout_constraintBottom_toTopOf="@+id/guideline16"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autoSizeTextType="uniform"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonLliures"
@@ -287,8 +289,9 @@
         android:id="@+id/textViewNumEuro"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
         android:text="0"
-        android:textAlignment="center"
+        android:textAlignment="textEnd"
         app:layout_constraintBottom_toTopOf="@+id/guideline15"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -299,8 +302,10 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:text="0"
+        android:textAlignment="textEnd"
         app:layout_constraintBottom_toTopOf="@+id/guideline13"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline14" />
+        app:layout_constraintTop_toTopOf="@+id/guideline14"
+        android:autoSizeTextType="uniform"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
