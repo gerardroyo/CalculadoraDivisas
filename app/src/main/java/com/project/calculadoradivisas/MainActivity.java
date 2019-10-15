@@ -113,10 +113,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void IntroduirValorEuro() {
-        int valor;
+        /*int valor;
         valor = Integer.valueOf(edtNumero.getText().toString());
         valor++;
-        edtNumero.setText(String.valueOf(valor));
+        edtNumero.setText(String.valueOf(valor));*/
     }
 
 }
