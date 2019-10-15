@@ -253,7 +253,8 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline14"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline15" />
+        app:layout_constraintTop_toTopOf="@+id/guideline15"
+        android:autoSizeTextType="uniform"/>
 
     <Button
         android:id="@+id/buttonDollar"
@@ -263,7 +264,8 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline14"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
         app:layout_constraintStart_toStartOf="@+id/guideline8"
-        app:layout_constraintTop_toTopOf="@+id/guideline15" />
+        app:layout_constraintTop_toTopOf="@+id/guideline15"
+        android:autoSizeTextType="uniform"/>
 
     <Button
         android:id="@+id/buttonYen"
@@ -273,7 +275,8 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline14"
         app:layout_constraintEnd_toStartOf="@+id/guideline10"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toTopOf="@+id/guideline15" />
+        app:layout_constraintTop_toTopOf="@+id/guideline15"
+        android:autoSizeTextType="uniform"/>
 
     <Button
         android:id="@+id/buttonYuan"
@@ -283,7 +286,8 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline14"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline10"
-        app:layout_constraintTop_toTopOf="@+id/guideline15" />
+        app:layout_constraintTop_toTopOf="@+id/guideline15"
+        android:autoSizeTextType="uniform"/>
 
     <TextView
         android:id="@+id/textViewNumEuro"
