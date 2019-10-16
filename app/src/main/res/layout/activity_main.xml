@@ -247,14 +247,15 @@
 
     <Button
         android:id="@+id/buttonLliures"
+        style="@style/Widget.AppCompat.Button"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
         android:text="LLIURES"
         app:layout_constraintBottom_toTopOf="@+id/guideline14"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline15"
-        android:autoSizeTextType="uniform"/>
+        app:layout_constraintTop_toTopOf="@+id/guideline15" />
 
     <Button
         android:id="@+id/buttonDollar"
