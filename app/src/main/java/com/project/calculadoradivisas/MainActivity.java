@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private Button buttonYuan;
 
     private TextView textViewNumEuro;
+    private TextView textViewNumDivisa;
 
     private Button button;
 
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         buttonYuan = findViewById(R.id.buttonYuan);
 
         textViewNumEuro = findViewById(R.id.textViewNumEuro);
+        textViewNumDivisa = findViewById(R.id.textViewNumDivisa);
 
         button =  findViewById(R.id.button0);
         button.setOnClickListener(new View.OnClickListener(){
@@ -128,6 +130,13 @@ public class MainActivity extends AppCompatActivity {
                 IntroduirValorEuro(",");
             }
         });
+        button = findViewById(R.id.buttonComa);
+        button.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Delete();
+            }
+        });
     }
 
     private void IntroduirValorEuro(String valor) {
@@ -140,17 +149,21 @@ public class MainActivity extends AppCompatActivity {
         } else {
 
             if (numTextEuro.indexOf(",") >= 0) {
-                if(numTextEuro.substring(numTextEuro.indexOf(",")).length() <= 2) {
+                if (numTextEuro.substring(numTextEuro.indexOf(",")).length() <= 2) {
                     if (numTextEuro.equals("0")) {
                         numTextEuro = "";
+                    }
                 }
+
+                textViewNumEuro.setText(numTextEuro + valor);
             }
 
-            textViewNumEuro.setText(numTextEuro + valor);
+
         }
 
+    }
 
-
+    private void Delete() {
 
     }
 
