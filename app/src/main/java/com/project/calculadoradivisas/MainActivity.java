@@ -129,6 +129,13 @@ public class MainActivity extends AppCompatActivity {
                 IntroduirValorEuro(",");
             }
         });
+<<<<<<< HEAD
+        button = findViewById(R.id.buttonComa);
+        button.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Delete();
+=======
 
         button = findViewById(R.id.buttonIgual);
         button.setOnClickListener(new View.OnClickListener(){
@@ -191,6 +198,7 @@ public class MainActivity extends AppCompatActivity {
                 if (MonedaSeleccionada == false) {
                     conversioMoneda("YUAN");
                 }
+>>>>>>> e0fd24bed18c4ab60e5cb1e1c3b417cfe93da3bf
             }
         });
     }
@@ -199,6 +207,29 @@ public class MainActivity extends AppCompatActivity {
 
         String numTextEuro = textViewNumEuro.getText().toString();
 
+<<<<<<< HEAD
+        if (numTextEuro.equals("0") && valor != (",")) {
+            numTextEuro = "";
+            textViewNumEuro.setText(numTextEuro + valor);
+        } else {
+
+            if (numTextEuro.indexOf(",") >= 0) {
+                if (numTextEuro.substring(numTextEuro.indexOf(",")).length() <= 2) {
+                    if (numTextEuro.equals("0")) {
+                        numTextEuro = "";
+                    }
+                }
+
+                textViewNumEuro.setText(numTextEuro + valor);
+            }
+
+
+        }
+
+    }
+
+    private void Delete() {
+=======
         if (valor == ",") {
             if (numTextEuro.indexOf(',') <= 0) {
                 textViewNumEuro.setText(numTextEuro + valor);
@@ -295,6 +326,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         ad.show();
+>>>>>>> e0fd24bed18c4ab60e5cb1e1c3b417cfe93da3bf
 
         // el Show es asíncrono.
     }
