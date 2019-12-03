@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     private Button button;
     private boolean MonedaSeleccionada = false;
     private double numConvercio;
+    private String moneda1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -261,6 +262,8 @@ public class MainActivity extends AppCompatActivity {
                     String valorString = edtValor.getText().toString().replaceAll(",", ".");
                     numConvercio = Double.valueOf(valorString);
 
+                    moneda1 = moneda;
+
                     switch (moneda) {
                         case "LLIURE":
                             buttonLliures.setBackgroundColor(Color.parseColor("#00EDF6"));
@@ -308,5 +311,51 @@ public class MainActivity extends AppCompatActivity {
 
         textViewNumDivisa.setText(formatDecimal.format(textViewDouble * numConvercio));
 
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle guardarEstado) {
+        MainActivity.super.onSaveInstanceState(guardarEstado);
+        String euro = textViewNumEuro.getText().toString();
+        String divisa = textViewNumDivisa.getText().toString();
+        boolean divisaEscollida = MonedaSeleccionada;
+
+        String button = moneda1;
+
+        guardarEstado.putString("euro", euro);
+        guardarEstado.putString("divisa", divisa);
+        guardarEstado.putBoolean("divisaEscollida", divisaEscollida);
+        guardarEstado.putString("moneda", button);
+
+
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle recEstado) {
+        MainActivity.super.onSaveInstanceState(recEstado);
+
+
+        textViewNumEuro.setText(recEstado.getString("euro"));
+        textViewNumDivisa.setText(recEstado.getString("divisa"));
+        MonedaSeleccionada = recEstado.getBoolean("divisaEscollida");
+        moneda1 = recEstado.getString("moneda");
+        switch (moneda1) {
+            case "LLIURE":
+                buttonLliures.setBackgroundColor(Color.parseColor("#00EDF6"));
+                buttonLliures.setTextColor(Color.parseColor("#030303"));
+                break;
+            case "DOLLAR":
+                buttonDollar.setBackgroundColor(Color.parseColor("#00EDF6"));
+                buttonDollar.setTextColor(Color.parseColor("#030303"));
+                break;
+            case "YEN":
+                buttonYen.setBackgroundColor(Color.parseColor("#00EDF6"));
+                buttonYen.setTextColor(Color.parseColor("#030303"));
+                break;
+            case "YUAN":
+                buttonYuan.setBackgroundColor(Color.parseColor("#00EDF6"));
+                buttonYuan.setTextColor(Color.parseColor("#030303"));
+                break;
+        }
     }
 }
